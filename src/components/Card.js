@@ -1,34 +1,35 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({name, atk, def, mana}) => {
+const Card = ({name, atk, def, mana}) => {
     const onClick = (e) => {
         console.log(e)
     }
     return (
   
-    <button 
+    <card 
         onClick={onClick} 
-        className='btn'>
+        className='card'>
         {name}
         <br></br>atk: {atk}
         <br></br>def: {def}
         <br></br>cost: {mana}
-    </button>
+    </card>
     )
 }
 
-Button.propTypes = {
+Card.propTypes = {
     name: PropTypes.string.isRequired,
     atk: PropTypes.number.isRequired,
     def: PropTypes.number.isRequired,
     mana:PropTypes.number.isRequired,
 }
 
-Button.defaultProps = {
-    name: 'null card',
-    atk: '0',
-    def: '0',
-    mana: '1'
+Card.defaultProps = {
+    name: '',
+    atk: '',
+    def: '',
+    mana: ''
 }
 
-export default Button
+export default Card

@@ -1,17 +1,28 @@
 import React from 'react'  
+import FieldSelf from './components/FieldSelf'
+import FieldOpponent from './components/FieldOpponent'
+import Opponent from './components/Opponent'
+import Self from './components/Self'
+
 //class App extends React.Component stuff
 //import HandCard from './HandCard'
 
-import Header from './components/Header'
+import Hand from './components/Hand'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Game />
-      <div className='container'>
-      <Header/>
-    </div>
+        <div className='container'>
+          <Opponent/>
+          <FieldOpponent/>
+          <FieldSelf/>
+          <Self/>
+        </div>
+        <div className='container'>
+          <Hand/>
+          
+        </div>
       </header>
     </div>
     
@@ -19,7 +30,7 @@ function App() {
 }
 
 
-
+/*
 //card functionality
 function Card(props) {
   return (
@@ -97,6 +108,6 @@ class Game extends React.Component {
     );
   }
 }
-
+*/
 
 export default App
